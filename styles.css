@@ -32,7 +32,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip;
 }
+
+/* "clip" corta sem criar área rolável: as palavras gigantes não deslocam a página para o lado */
+.hero, .services, .ticker, .projects, .site-footer { overflow: hidden; overflow: clip !important; }
 
 img { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
